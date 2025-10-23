@@ -6,7 +6,7 @@ from model import predict_stock
 from utils import fetch_data, plot_predictions
 
 st.set_page_config(page_title="InsightTrader - AI Stock Forecast", layout="wide")
-st.title("📈 InsightTrader: AI-Powered Stock Forecast Dashboard")
+st.title("📈 NueroTrade: AI-Powered Stock Forecast Dashboard")
 
 st.sidebar.header("Input Options")
 option = st.sidebar.radio("Choose Data Source:", ("Upload CSV", "Fetch from Ticker"))
