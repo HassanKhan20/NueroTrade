@@ -1,0 +1,54 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Data and reports (large + reproducible)
+data/parquet/
+data/manifests/
+data/parquet_daily/
+reports/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Bot runtime state
+bot_state.json
+shadow_orders.jsonl
+
+# Claude Code local state
+.claude/

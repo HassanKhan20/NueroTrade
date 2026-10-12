@@ -1,0 +1,45 @@
+# Strategy parameters — placeholder until Phase 5 freezes them via CPCV.
+# DO NOT hand-tune these. They will be overwritten by scripts/freeze_params.py
+# only after PBO < 0.15 and Deflated Sharpe > 0.95 on the in-sample window.
+#
+# Bot mandate: LONG-ONLY EQUITIES. No shorts, no options, no leveraged ETFs.
+
+frozen: false
+git_sha: null
+frozen_at: null
+
+mandate:
+  long_only: true
+  equities_only: true
+  no_options: true
+
+orb_stocks_in_play:
+  rel_vol_window: 14
+  top_n: 20
+  atr_window: 14
+  stop_atr_pct: 0.10
+  risk_per_trade: 0.01
+  max_leverage: 4.0
+  opening_range_minutes: 5
+  exit_minute_et: "15:55"
+
+intraday_momentum:
+  symbols: ["SPY", "QQQ"]
+  signal_minute_et: "14:55"
+  entry_minute_et: "15:00"
+  exit_minute_et: "15:55"
+  risk_pct: 0.005
+  use_and_filter: true
+
+vol_regime:
+  vix_lookback_days: 252
+  realized_vol_window: 20
+  realized_vol_history_years: 5
+  reduce_at_vix_pct: 0.90
+  reduce_at_vol_z: 2.0
+  halt_at_vix_pct: 0.97
+
+allocator:
+  weight_orb: 0.60
+  weight_intraday_momentum: 0.30
+  cash_reserve: 0.10
